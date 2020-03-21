@@ -9,7 +9,7 @@ class View(BaseComponent):
     def th_struct(self,struct):
         r = struct.view().rows()
         r.fieldcell('ordine_id')
-        r.fieldcell('prodotto_id',edit=True,width='20em')
+        r.fieldcell('prodotto',edit=True,width='20em')
         r.fieldcell('quantita',edit=True)
         r.fieldcell('note',edit=True)
 
@@ -27,7 +27,7 @@ class Form(BaseComponent):
         pane = form.record
         fb = pane.formbuilder(cols=2, border_spacing='4px')
         fb.field('ordine_id' )
-        fb.field('prodotto_id' )
+        fb.field('prodotto' )
         fb.field('quantita' )
         fb.field('note' )
 
