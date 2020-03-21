@@ -8,3 +8,4 @@ class Table(object):
         tbl.column('prodotto',name_long='Prodotto')
         tbl.column('quantita',name_long='Quantità')
         tbl.column('note',name_long='Note')
+        tbl.column('mancante', dtype='B', name_long='Mancante')

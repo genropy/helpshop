@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<GenRoBag><metadata><email><subject _T="NN"></subject>
+<to_address _T="NN"></to_address>
+<from_address _T="NN"></from_address>
+<cc_address _T="NN"></cc_address>
+<bcc_address _T="NN"></bcc_address>
+<attachments _T="NN"></attachments></email></metadata>
+<varsbag><flrlc7vtx5 _pkey="flrlc7vtx5"><fieldpath>indirizzo</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Indirizzo</fieldname>
+<varname dtype="::NN">indirizzo</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></flrlc7vtx5>
+<flrlc9hgrl _pkey="flrlc9hgrl"><fieldpath>nominativo</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Nominativo</fieldname>
+<varname dtype="::NN">nominativo</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></flrlc9hgrl>
+<flrlcciyw9 _pkey="flrlcciyw9"><fieldpath>telefono</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Telefono</fieldname>
+<varname dtype="::NN">telefono</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></flrlcciyw9>
+<flrlcdi53l _pkey="flrlcdi53l"><fieldpath>email</fieldpath>
+<dtype dtype="::NN">T</dtype>
+<fieldname dtype="::NN">Email</fieldname>
+<varname dtype="::NN">email</varname>
+<virtual_column _T="NN"></virtual_column>
+<required_columns _T="NN"></required_columns>
+<df_template _T="NN"></df_template>
+<format _T="NN" dtype="::NN"></format>
+<mask _T="NN" dtype="::NN"></mask>
+<editable _T="NN" dtype="::NN"></editable></flrlcdi53l></varsbag>
+<content>&lt;div&gt;
+	&lt;strong&gt;&lt;span style="font-size:14px;"&gt;$nominativo&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&amp;nbsp;&lt;/div&gt;
+&lt;div&gt;
+	${Tel:$telefono}&lt;/div&gt;
+&lt;div&gt;
+	$email&lt;/div&gt;
+&lt;div&gt;
+	$indirizzo&lt;/div&gt;
+</content>
+<compiled><main maintable="shop.persona" locale="it-IT" virtual_columns="" columns="$indirizzo,$nominativo,$telefono,$email" formats="{}::JS" masks="{}::JS" editcols="{}::JS" df_templates="{}::JS" dtypes='{"indirizzo": "T", "nominativo": "T", "telefono": "T", "email": "T"}::JS'>&lt;html&gt;&lt;body&gt;&lt;div&gt;
+	&lt;strong&gt;&lt;span style="font-size:14px;"&gt;$nominativo&lt;/span&gt;&lt;/strong&gt;&lt;/div&gt;
+&lt;div&gt;
+	&amp;#160;&lt;/div&gt;
+&lt;div&gt;
+	${Tel:$telefono}&lt;/div&gt;
+&lt;div&gt;
+	$email&lt;/div&gt;
+&lt;div&gt;
+	$indirizzo&lt;/div&gt;
+&lt;/body&gt;&lt;/html&gt;</main></compiled></GenRoBag>

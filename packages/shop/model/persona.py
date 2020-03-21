@@ -11,3 +11,4 @@ class Table(object):
         tbl.column('telefono',name_long='Telefono')
         tbl.column('email',name_long='Email')
         tbl.column('w3w',name_long='W3W')
+        tbl.column('privacy_accettata', dtype='B', name_long='Privacy')
