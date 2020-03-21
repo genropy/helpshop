@@ -18,5 +18,7 @@ class Table(object):
         tbl.column('priorità', dtype='L', name_long='Priorità')
         tbl.column('ragione', name_long='Ragione')
         tbl.column('data_consegna',dtype='D',name_long='Data consegna')
+        tbl.column('ora_consegna',dtype='H',name_long='Ora consegna')
+
         tbl.column('consegna_ts',dtype='DH',name_long='Consegnato il')
 

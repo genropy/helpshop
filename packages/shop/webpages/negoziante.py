@@ -16,10 +16,7 @@ class GnrCustomWebPage(object):
     def main(self, root, **kwargs):
         negozio = self.rootenv['nome_negozio']
         root = root.rootContentPane(datapath="main", title=f"Gestione ordini di {negozio}")
-        root.thFormHandler(
-            datapath="main.negozio",
-            formId="formNegozio",
-            formResource="GestioneOrdiniNegozio",
-            table="bau.staff",
-            startKey=self.rootenv["negozio_id"],
-        )
+        self.ordini(root)
+
+    def ordini(self,pane):
+        pane.dialogTableHandler(table='shop.ordine',view_store__onStart=True,datapath='.ordini')

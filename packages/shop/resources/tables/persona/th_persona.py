@@ -38,7 +38,7 @@ class FormLinker(BaseComponent):
                  #selected_street_address='.indirizzo_',
                  selected_locality='.localita',
                  selected_position='.geocoder',
-                 ghost=u'Strada, Numero, Località')          
+                 ghost=u'Strada, Numero, Località')         
         fb.field('w3w')
 
 

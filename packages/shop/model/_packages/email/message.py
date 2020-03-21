@@ -5,11 +5,12 @@ class Table(object):
 
     def trigger_onInserted(self, record):
         if record['in_out'] == 'I':
-            subject = record['subject']
-            if subject and subject.upper().startswith('NEGOZIO'):
-                self.insertRichiesta(record,subject=subject[10:])
-            elif subject and subject.upper().startswith('AGGIORNAMENTO'):
-                self.insertRichiesta(record,subject=subject[13:], aggiornamento=True)
-            email_bag = record['email_bag']
-            if subject == 'Re: Richiesta ulteriori informazioni sul suo profilo' or email_bag['In-Reply-To']:
-                self.aggiornaRichiesta(record)
+            self.insertRichiesta(record)
+
+    def insertRichiesta(self,record=None):
+        mittente,indirizzo_email =self.parsedAddress(record['from_address'])
+        record_richiesta = dict(email=indirizzo_email,
+                        nominativo=mittente, 
+                        message_id=record['id'],
+                        oggetto=record['subject'],
+                        testo=record['body'])

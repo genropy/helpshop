@@ -7,6 +7,8 @@ class Table(object):
         tbl.column('oggetto', name_long='Oggetto')
         tbl.column('nominativo', name_long='Nominativo')
         tbl.column('testo', name_long='Testo')
+        tbl.column('email', name_long='Email')
+        tbl.column('telefono', name_long='Telefono')
         tbl.column('message_id',size='22', group='_', name_long='Messaggio email'
                     ).relation('email.message.id',
                                 mode='foreignkey', onDelete='raise')

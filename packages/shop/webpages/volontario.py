@@ -14,13 +14,15 @@ class GnrCustomWebPage(object):
     pageOptions = {"openMenu": False, "liveUpdate": True}
 
     def main(self, root, **kwargs):
-        username = self.rootenv['username']
-        root = root.rootTabContainer(datapath="main", title=f"Gestione ordini {username}")
+        root = root.rootTabContainer(datapath="main", title=f"Gestione spesa {self.user}")
         self.richieste(root.contentPane(title='Richieste'))
         self.ordini(root.contentPane(title='Ordini'))
 
     def richieste(self,pane):
-        pane.dialogTableHandler(table='shop.richiesta',view_store__onStart=True,datapath='.richieste')
+        pane.dialogTableHandler(table='shop.richiesta',
+                                    viewResource='View',formResource='Form',
+                                    view_store__onStart=True,datapath='.richieste')
 
     def ordini(self,pane):
-        pane.dialogTableHandler(table='shop.ordini',view_store__onStart=True,datapath='.ordini')
+        pane.dialogTableHandler(table='shop.ordine',view_store__onStart=True,datapath='.ordini',
+                                viewResource='ViewFromVolontario',formResource='FormFromVolontario')
